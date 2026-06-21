@@ -1,22 +1,61 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import SymptomChecker from '../components/SymptomChecker.jsx';
-import AIPromptGenerator from '../components/AIPromptGenerator.jsx';
 ---
 
-<BaseLayout title="Dashboard | Practical Podiatrist">
-  <header class="mb-10 mt-8 text-center">
-    <h1 class="text-4xl font-bold text-primary mb-2">Practical Podiatrist</h1>
-    <p class="text-muted">Clinical Decision Support Dashboard</p>
-  </header>
-
-  <div class="grid gap-8">
-    <section>
-      <SymptomChecker client:load />
-    </section>
+<BaseLayout title="Practical Podiatrist | Better Foot & Ankle Health">
+  
+  <section class="max-w-4xl mx-auto px-6 pt-24 pb-16 text-center">
+    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 text-slate-300 text-xs font-semibold uppercase tracking-wider mb-8">
+      <span class="text-teal-400">✦</span> Evidence-Based • Practical • For Everyone
+    </div>
     
-    <section>
-      <AIPromptGenerator client:load />
-    </section>
-  </div>
+    <h1 class="text-5xl md:text-7xl font-bold tracking-tight mb-6 text-white">
+      Better foot health.<br/><span class="text-teal-400">Made simple.</span>
+    </h1>
+    
+    <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
+      Practical tools and clear, research-backed guidance for anyone who wants healthier feet—whether you're a patient seeking answers or a clinician looking for better resources.
+    </p>
+    
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="#symptom-checker" class="px-8 py-4 bg-teal-400 hover:bg-teal-300 text-slate-950 font-bold rounded-xl transition shadow-lg shadow-teal-400/20">
+        Try the Symptom Checker
+      </a>
+      <a href="/blog" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-slate-200 font-medium rounded-xl border border-white/10 transition">
+        Browse Resources
+      </a>
+    </div>
+  </section>
+
+  <section id="symptom-checker" class="max-w-4xl mx-auto px-6 py-16 text-center">
+    <h2 class="text-3xl font-bold text-white mb-2">Understand Your Symptoms</h2>
+    <p class="text-slate-400 mb-10">Get clear, evidence-based insights in under a minute.</p>
+
+    <div class="bg-slate-900 border border-white/10 p-8 rounded-2xl shadow-xl max-w-3xl mx-auto text-left">
+      <h3 class="text-2xl font-semibold text-white mb-2 text-center">Interactive Visual Pain Guide</h3>
+      <p class="text-slate-400 text-center mb-8 text-sm">Select a hotspot zone on the foot diagram, then tell us how your symptoms began.</p>
+      
+      <div class="border border-white/10 rounded-xl p-6 bg-slate-950 mb-6 flex flex-col items-center justify-center min-h-[250px]">
+         <span class="text-slate-500 text-sm mb-6">Anatomical Target Map</span>
+         
+         <div class="flex flex-wrap justify-center gap-2 mb-8">
+           <button class="px-4 py-1 bg-teal-400 text-slate-900 text-sm rounded-full font-medium">Dorsal</button>
+           <button class="px-4 py-1 bg-white/5 text-slate-300 text-sm rounded-full hover:bg-white/10 transition">Plantar</button>
+           <button class="px-4 py-1 bg-white/5 text-slate-300 text-sm rounded-full hover:bg-white/10 transition">Medial</button>
+           <button class="px-4 py-1 bg-white/5 text-slate-300 text-sm rounded-full hover:bg-white/10 transition">Lateral</button>
+           <button class="px-4 py-1 bg-white/5 text-slate-300 text-sm rounded-full hover:bg-white/10 transition">Ankle</button>
+         </div>
+         
+         <p class="text-teal-400 font-medium">Selected: Bottom of Heel</p>
+      </div>
+
+      <div class="space-y-3">
+         <p class="text-sm text-slate-400 mb-2">How did the symptoms begin?</p>
+         <button class="w-full py-3 bg-slate-950 border border-white/10 rounded-lg text-slate-300 hover:border-teal-400/50 hover:bg-slate-900 transition text-sm text-left px-4">💥 An Injury or Trauma / Friction Blister</button>
+         <button class="w-full py-3 bg-slate-950 border border-white/10 rounded-lg text-slate-300 hover:border-teal-400/50 hover:bg-slate-900 transition text-sm text-left px-4">⚡ Suddenly / Rapid Flaring & Itching</button>
+         <button class="w-full py-3 bg-slate-950 border border-white/10 rounded-lg text-slate-300 hover:border-teal-400/50 hover:bg-slate-900 transition text-sm text-left px-4">⏳ Slowly Worsening / Building Over Weeks</button>
+      </div>
+      
+    </div>
+  </section>
 </BaseLayout>

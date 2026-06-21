@@ -1,17 +1,27 @@
 ---
 import '../styles/global.css';
-const { title = "Practical Podiatrist" } = Astro.props;
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
 ---
+
+<!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
   </head>
-  <body class="bg-bg text-text min-h-screen font-sans">
-    <main class="max-w-4xl mx-auto p-6">
+  <body class="bg-[#0a0f1c] text-slate-100 min-h-screen flex flex-col antialiased">
+    <Header />
+    <div class="flex-grow">
       <slot />
-    </main>
+    </div>
+    <Footer />
   </body>
 </html>
