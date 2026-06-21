@@ -1,0 +1,17 @@
+---
+import '../styles/global.css';
+const { title = "Practical Podiatrist" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+  </head>
+  <body class="bg-bg text-text min-h-screen font-sans">
+    <main class="max-w-4xl mx-auto p-6">
+      <slot />
+    </main>
+  </body>
+</html>

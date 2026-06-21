@@ -1,0 +1,27 @@
+[
+  {
+    "qKey": "region",
+    "question": "Where is the primary symptom?",
+    "options": [
+      { "label": "Heel / Plantar Arch", "value": "heel" },
+      { "label": "Forefoot / Metatarsal", "value": "forefoot" },
+      { "label": "Lateral Malleolus", "value": "lateral" }
+    ],
+    "next": { "heel": 1, "forefoot": 2, "lateral": 3 }
+  },
+  {
+    "qKey": "onset",
+    "question": "How did it start?",
+    "options": [
+      { "label": "Sudden trauma / twist", "value": "acute" },
+      { "label": "Gradual / overuse", "value": "chronic" }
+    ],
+    "next": { "acute": 4, "chronic": 5 }
+  },
+  {
+    "qKey": "diagnosis",
+    "question": null,
+    "options": [],
+    "next": { "acute": "Acute lateral ankle sprain / peroneal tendonitis → RICE + functional taping", "chronic": "Chronic plantar fasciopathy / metatarsalgia → Load management + orthotic assessment" }
+  }
+]
