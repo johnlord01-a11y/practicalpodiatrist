@@ -1,15 +1,8 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@theme {
-  --color-bg: #0F1419;
-  --color-surface: #1A2332;
-  --color-primary: #06B6D4;
-  --color-accent: #2DD4BF;
-  --color-text: #F1F5F9;
-  --color-muted: #94A3B8;
-}
-
+/* Custom site-wide overrides */
 body {
-  background-color: var(--color-bg);
-  color: var(--color-text);
+  @apply bg-slate-950 text-slate-100 antialiased;
 }
