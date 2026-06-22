@@ -22,3 +22,11 @@ body {
 .animation-delay-5000 {
   animation-delay: -5s; /* Starts the second orb out of sync immediately */
 }
+
+/* Accessibility: Stop background orb animation if user prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-orb {
+    animation: none !important;
+    transform: none !important;
+  }
+}
