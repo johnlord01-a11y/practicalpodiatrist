@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Patient Treatment Logs & Watchdog Guides | Practical Podiatrist">
+  <section class="max-w-5xl mx-auto px-6 py-16 text-slate-300 relative z-10">
+    <header class="mb-16 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold text-white tracking-tight mb-4">Patient Treatment Logs</h1>
+      <p class="text-slate-400 max-w-xl mx-auto text-lg">Honest, independent, field-tested guides to curing complex foot conditions without retail traps.</p>
+    </header>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <a href="/plantar-fasciitis" class="group block p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-teal-400/40 hover:bg-white/[0.05] transition-all duration-300">
+        <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Treatment Protocol</span>
+        <h2 class="text-xl font-semibold text-white group-hover:text-teal-400 transition mb-3">The 3-Part Plantar Fasciitis Guide</h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">Master localized fluid clearance, sponge compression mechanics, and the emergency fallback strategy.</p>
+        <span class="text-xs text-teal-400 font-medium inline-flex items-center gap-1">Read Protocol →</span>
+      </a>
+
+      <a href="/orthotics" class="group block p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-teal-400/40 hover:bg-white/[0.05] transition-all duration-300">
+        <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Watchdog Report</span>
+        <h2 class="text-xl font-semibold text-white group-hover:text-teal-400 transition mb-3">Exposing the Orthotic Price Trap</h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">How to skip multi-thousand dollar retail store scams and test inserts for torsional stability right in the aisle.</p>
+        <span class="text-xs text-teal-400 font-medium inline-flex items-center gap-1">Read Teardown →</span>
+      </a>
+
+      <a href="/shoes" class="group block p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-teal-400/40 hover:bg-white/[0.05] transition-all duration-300">
+        <span class="text-xs font-bold text-accent uppercase tracking-widest block mb-2">Footwear Matrix</span>
+        <h2 class="text-xl font-semibold text-white group-hover:text-teal-400 transition mb-3">The Stability shoe Matrix</h2>
+        <p class="text-sm text-slate-400 leading-relaxed mb-4">Vetted, independent breakdowns of Brooks, Hoka, and New Balance models based on structural engineering physics.</p>
+        <span class="text-xs text-teal-400 font-medium inline-flex items-center gap-1">Read Matrix →</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
